@@ -1,0 +1,8 @@
+import shopl.ShoppingListEntry
+
+model {
+	Iterable<ShoppingListEntry> shoppingListEntryList
+}
+
+json tmpl.shoppingListEntry(shoppingListEntryList ?: [])
+

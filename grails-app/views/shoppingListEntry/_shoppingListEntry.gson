@@ -1,0 +1,11 @@
+import shopl.ShoppingListEntry
+
+model {
+	ShoppingListEntry shoppingListEntry
+}
+
+json {
+	id shoppingListEntry.id
+	title shoppingListEntry.title
+	description shoppingListEntry.description
+}

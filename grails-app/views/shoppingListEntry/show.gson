@@ -1,0 +1,7 @@
+import shopl.ShoppingListEntry
+
+model {
+	ShoppingListEntry shoppingListEntry
+}
+
+json tmpl.shoppingListEntry(shoppingListEntry)

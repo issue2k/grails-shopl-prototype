@@ -1,0 +1,23 @@
+<h2>Your shopping lists</h2>
+<div container>
+  <div row ng-repeat="shoppingList in vm.shoppingLists">
+    <div column="12">
+        <div class="sl--card">
+          <a href="" class="alert-close" ng-click="vm.delete(shoppingList)">&times;</a>
+          <a ui-sref="shoppingList.show({id: shoppingList.id})"><h4>{{shoppingList.name}}</h4></a>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div row>
+    <div column="12">
+      <form class="form form--inline sl--form">
+        <ul class="list--unstyled alert alert--error" role="alert" ng-if="vm.errors">
+          <li ng-repeat="error in vm.errors">{{error.message}}</li>
+        </ul>
+        <input placeholder="add new list here" type="text" class="" ng-model="vm.newShoppingList.name" />
+        <button class="button button--xsm" ng-click="vm.save()">Add</button>
+      </form>
+    </div>
+  </div>
+</div>

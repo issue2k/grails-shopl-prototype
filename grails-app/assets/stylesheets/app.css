@@ -1,0 +1,43 @@
+.sl--header {
+    border-bottom: 1px solid #eee;
+}
+
+.sl--footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 25px;
+}
+
+.sl--logo {
+    font-size: 22px;
+}
+
+.nav {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.nav li {
+    display: inline;
+    line-height: 3;
+    margin-left: 25px;
+}
+.nav li:first-of-type {
+    margin-left: 0;
+}
+
+.sl--card,
+.sl--form {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    color: inherit;
+    font-size: .875em;
+    margin: 2px 0;
+    padding: 8px 1em;
+    position: relative;
+}
+
+.sl--card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

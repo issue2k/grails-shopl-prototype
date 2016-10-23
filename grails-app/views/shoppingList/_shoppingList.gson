@@ -1,0 +1,7 @@
+import shopl.ShoppingList
+
+model {
+	ShoppingList shoppingList
+}
+
+json g.render(shoppingList, [deep:true])
