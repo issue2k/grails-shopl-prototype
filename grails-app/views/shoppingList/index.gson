@@ -1,8 +1,0 @@
-import shopl.ShoppingList
-
-model {
-	Iterable<ShoppingList> shoppingListList
-}
-
-json tmpl.shoppingList(shoppingListList ?: [])
-

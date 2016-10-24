@@ -8,4 +8,5 @@ json {
 	id shoppingListEntry.id
 	title shoppingListEntry.title
 	description shoppingListEntry.description
+	done shoppingListEntry.done
 }

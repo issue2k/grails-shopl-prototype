@@ -4,7 +4,7 @@ angular
     .module("shopl.shoppingList")
     .controller("ShoppingListController", ShoppingListController);
 
-function ShoppingListController(ShoppingList, ShoppingListEntry) {
+function ShoppingListController(ShoppingList, $stateParams, $state) {
     var vm = this;
     vm.shoppingLists = ShoppingList.list();
     vm.newShoppingList = new ShoppingList();

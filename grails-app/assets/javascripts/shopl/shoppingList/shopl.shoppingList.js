@@ -25,8 +25,8 @@ function config($stateProvider) {
             controller: "ShoppingListController as vm"
         })
         .state('shoppingList.show', {
-            url: "/show/:id",
+            url: "/shoppingList/:shoppingListId/entries",
             templateUrl: "/shopl/shoppingList/show.html",
-            controller: "ShoppingListShowController as vm"
+            controller: "ShoppingListEntryController as vm"
         });
 }

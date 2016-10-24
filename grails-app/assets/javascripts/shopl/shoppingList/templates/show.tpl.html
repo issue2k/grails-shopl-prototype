@@ -1,9 +1,9 @@
-<h1>{{vm.shoppingList.name}}</h1>
-<div row ng-repeat="shoppingListEntry in vm.shoppingList.entries">
+<h3>{{ vm.shoppingList.name }}</h3>
+<div row ng-repeat="shoppingListEntry in vm.shoppingListEntries">
     <div column="12">
         <div class="sl--card">
-            <a href="" class="alert-close" ng-click="vm.deleteEntry(shoppingListEntry)">&times;</a>
-            <input type="checkbox"/>
+            <a href="" class="alert-close" ng-click="vm.delete(shoppingListEntry)">&times;</a>
+            <input type="checkbox" ng-model="shoppingListEntry.done" ng-change="vm.update(shoppingListEntry)"/>
             <h4>{{shoppingListEntry.title}}</h4>
             <p>{{shoppingListEntry.description}}</p>
         </div>
@@ -12,13 +12,15 @@
 </div>
 <div row>
     <div column="12">
+
         <form class="sl--form">
+            <h5>Add a new entry</h5>
             <ul class="list--unstyled alert alert--error" role="alert" ng-if="vm.errors">
                 <li ng-repeat="error in vm.errors">{{error.message}}</li>
             </ul>
-            <input type="text" class="" ng-model="vm.newShoppingListEntry.title" placeholder="add new entry here"/>
-            <textarea class="" ng-model="vm.newShoppingListEntry.description" placeholder="add description here"></textarea>
-            <button class="button button--xsm" ng-click="vm.saveEntry()">Add</button>
+            <input type="text" class="" ng-model="vm.newShoppingListEntry.title" placeholder="title"/><br><br>
+            <textarea class="" ng-model="vm.newShoppingListEntry.description" placeholder="description"></textarea><br><br>
+            <button class="button button--xsm" ng-click="vm.save()">Add</button>
         </form>
     </div>
 </div>

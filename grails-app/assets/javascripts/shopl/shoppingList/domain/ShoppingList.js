@@ -11,7 +11,8 @@ function ShoppingList($resource) {
         {"id": "@id"},
         {"update": {method: "PUT"},
          "query": {method: "GET", isArray: true},
-         "get": {method: 'GET'}}
+         "get": {method: 'GET',
+         "change": {method: 'PUT'}}}
     );
 
     ShoppingList.list = ShoppingList.query;

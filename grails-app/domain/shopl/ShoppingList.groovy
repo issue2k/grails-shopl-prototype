@@ -7,10 +7,6 @@ class ShoppingList {
 
    String name
 
-   static hasMany = [
-       entries:ShoppingListEntry
-   ]
-
    static constraints = {
       name(nullable: false, blank:false)
    }

@@ -7,11 +7,11 @@ angular
 
 function ShoppingListEntry($resource) {
     var ShoppingListEntry = $resource(
-        "shoppingListEntry/:id",
+        "shoppingList/:shoppingListId/entries/:id",
         {"id": "@id"},
         {"update": {method: "PUT"},
-            "query": {method: "GET", isArray: true},
-            "get": {method: 'GET'}}
+         "query": {method: "GET", isArray: true},
+         "get": {method: 'GET'}}
     );
 
     ShoppingListEntry.list = ShoppingListEntry.query;
