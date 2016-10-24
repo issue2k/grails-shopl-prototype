@@ -41,3 +41,8 @@
 .sl--card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
+.sl--card-done {
+    text-decoration: line-through;
+    box-shadow: none !important;
+}

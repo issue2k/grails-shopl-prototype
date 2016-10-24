@@ -1,7 +1,7 @@
 <h3>{{ vm.shoppingList.name }}</h3>
 <div row ng-repeat="shoppingListEntry in vm.shoppingListEntries">
     <div column="12">
-        <div class="sl--card">
+        <div class="sl--card"  ng-class="{'sl--card-done': shoppingListEntry.done}">
             <a href="" class="alert-close" ng-click="vm.delete(shoppingListEntry)">&times;</a>
             <input type="checkbox" ng-model="shoppingListEntry.done" ng-change="vm.update(shoppingListEntry)"/>
             <h4>{{shoppingListEntry.title}}</h4>
